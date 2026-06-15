@@ -138,7 +138,7 @@ button {
 }
 
 /* ===== LOADING SCREEN ===== */
-/* #loading-screen {
+#loading-screen {
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -166,9 +166,9 @@ button {
   width: 100px;
   height: 100px;
   object-fit: contain;
-} */
+}
 
-/* @keyframes loaderPulse {
+@keyframes loaderPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.25); }
 }
@@ -202,7 +202,38 @@ button {
 @keyframes loaderFill {
   0% { width: 0%; }
   100% { width: 100%; }
-} */
+}
+
+/* ===== ACCESSIBILITY ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  z-index: 10001;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .3s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
 
 /* ===== NAVBAR ===== */
 #navbar {
@@ -610,6 +641,7 @@ button {
   line-height: 1.7;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -712,6 +744,14 @@ button {
   opacity: 0;
   visibility: hidden;
   transition: all .4s;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .modal.active {
@@ -1127,6 +1167,26 @@ button {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
+}
+
+.tentang-mitra .testimonial-author {
+  border-top: none;
+  padding-top: 0;
+}
+
+.tentang-stats-grid {
+  max-width: 1000px;
+  margin-top: 40px;
+}
+
+.tentang-penyebaran .stat-card p:first-of-type {
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.tentang-penyebaran .stat-card p:last-of-type {
+  font-size: 13px;
 }
 
 .testimonial-author h4 {
@@ -1992,6 +2052,12 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  list-style: none;
+  padding: 0;
+}
+
+.proses-timeline li {
+  list-style: none;
 }
 
 .proses-card {
