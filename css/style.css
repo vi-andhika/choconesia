@@ -138,7 +138,7 @@ button {
 }
 
 /* ===== LOADING SCREEN ===== */
-#loading-screen {
+/* #loading-screen {
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -166,9 +166,9 @@ button {
   width: 100px;
   height: 100px;
   object-fit: contain;
-}
+} */
 
-@keyframes loaderPulse {
+/* @keyframes loaderPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.25); }
 }
@@ -202,7 +202,7 @@ button {
 @keyframes loaderFill {
   0% { width: 0%; }
   100% { width: 100%; }
-}
+} */
 
 /* ===== NAVBAR ===== */
 #navbar {
