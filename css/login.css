@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #fdf6ee;
+  }
+
+  .cn-page {
+    min-height: 100vh;
+    background: #fdf6ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cn-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(196,125,58,0.07);
+    pointer-events: none;
+  }
+  .cn-bg-circle.c1 { width: 320px; height: 320px; top: -100px; right: -80px; }
+  .cn-bg-circle.c2 { width: 220px; height: 220px; bottom: -60px; left: -50px; }
+
+  .cn-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .cn-brand-icon {
+    width: 36px; height: 36px;
+    background: #3d1f0a;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: #e8c98a;
+    font-size: 17px;
+  }
+  .cn-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #3d1f0a;
+    letter-spacing: 0.3px;
+  }
+  .cn-tagline {
+    font-size: 11px;
+    color: #b08050;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .cn-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 0.5px solid #e8d5b8;
+    padding: 2rem 2rem 1.75rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 2px 24px rgba(100,50,10,0.07);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cn-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2a1205;
+    margin: 0 0 4px;
+  }
+  .cn-card-sub {
+    font-size: 13px;
+    color: #a07848;
+    margin: 0 0 1.5rem;
+  }
+
+  .cn-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7a5030;
+    margin-bottom: 6px;
+  }
+  .cn-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fdf6ee;
+    border: 1px solid #e0c9a8;
+    border-radius: 10px;
+    color: #2a1205;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    margin-bottom: 1rem;
+  }
+  .cn-input::placeholder { color: #c4a882; }
+  .cn-input:focus { border-color: #c47d3a; background: #fff; }
+
+  .cn-input-wrap { position: relative; margin-bottom: 1rem; }
+  .cn-input-wrap .cn-input { margin-bottom: 0; padding-right: 40px; }
+  .cn-eye {
+    position: absolute; right: 12px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none;
+    color: #b08050; cursor: pointer; font-size: 16px; padding: 0;
+  }
+
+  .cn-row {
+    display: flex; justify-content: flex-end;
+    margin-top: -4px; margin-bottom: 1.25rem;
+  }
+  .cn-forgot { font-size: 12px; color: #c47d3a; text-decoration: none; cursor: pointer; }
+  .cn-forgot:hover { text-decoration: underline; }
+
+  .cn-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3d1f0a;
+    border: none;
+    border-radius: 50px;
+    color: #f0e0c0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: opacity 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .cn-btn:hover { opacity: 0.85; }
+
+  .cn-divider {
+    display: flex; align-items: center; gap: 10px;
+    margin: 0.25rem 0 0.75rem;
+  }
+  .cn-div-line { flex: 1; height: 1px; background: #ecddc8; }
+  .cn-div-txt { font-size: 12px; color: #c4a882; }
+
+  .cn-btn-google {
+    width: 100%; padding: 11px;
+    background: #fff;
+    border: 1px solid #e0c9a8;
+    border-radius: 50px;
+    color: #3d1f0a;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    transition: background 0.2s;
+  }
+  .cn-btn-google:hover { background: #fdf6ee; }
+
+  .cn-signup {
+    text-align: center;
+    font-size: 12px;
+    color: #b08050;
+    margin-top: 1.25rem;
+  }
+  .cn-signup a { color: #c47d3a; text-decoration: none; font-weight: 500; }
+  .cn-signup a:hover { text-decoration: underline; }
+
+  .cn-dots {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 6px);
+    gap: 8px;
+    opacity: 0.12;
+  }
+  .cn-dots.d1 { bottom: 40px; right: 30px; }
+  .cn-dot { width: 4px; height: 4px; border-radius: 50%; background: #c47d3a; }
