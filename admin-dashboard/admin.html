@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - ChocoNesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="icon" href="../logo/cocoa-icon-fix-fix.png">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><i class="fas fa-crown" aria-hidden="true"></i> ChocoNesia</div>
+
+      <div class="nav-section-label">Menu utama</div>
+      <a class="nav-item active"><i class="fas fa-grip" aria-hidden="true"></i> Dashboard</a>
+      <a class="nav-item"><i class="fas fa-box" aria-hidden="true"></i> Produk</a>
+      <a class="nav-item"><i class="fas fa-cart-shopping" aria-hidden="true"></i> Pesanan</a>
+      <a class="nav-item"><i class="fas fa-leaf" aria-hidden="true"></i> Mitra petani</a>
+      <a class="nav-item"><i class="fas fa-users" aria-hidden="true"></i> Pelanggan</a>
+
+      <div class="nav-section-label">Lainnya</div>
+      <a class="nav-item"><i class="fas fa-chart-column" aria-hidden="true"></i> Laporan</a>
+      <a class="nav-item"><i class="fas fa-gear" aria-hidden="true"></i> Pengaturan</a>
+
+      <div class="sidebar-footer">
+        <div class="admin-profile">
+          <div class="admin-avatar">AD</div>
+          <div>
+            <div class="admin-name">Admin ChocoNesia</div>
+            <div class="admin-role">Super admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="page-title">Ringkasan</div>
+          <div class="page-sub">Selamat datang kembali, berikut ringkasan hari ini</div>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Ganti tema">
+          <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="metrics">
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-sack-dollar" aria-hidden="true"></i></div>
+          <div class="metric-label">Pendapatan bulan ini</div>
+          <div class="metric-value">Rp 84,2jt</div>
+          <span class="metric-delta up"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> +12,4%</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-cart-shopping" aria-hidden="true"></i></div>
+          <div class="metric-label">Pesanan baru</div>
+          <div class="metric-value">312</div>
+          <span class="metric-delta up"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> +8,1%</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
+          <div class="metric-label">Mitra petani aktif</div>
+          <div class="metric-value">47</div>
+          <span class="metric-delta up"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> +3 baru</span>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-box" aria-hidden="true"></i></div>
+          <div class="metric-label">Stok produk rendah</div>
+          <div class="metric-value">6</div>
+          <span class="metric-delta down"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Perlu restock</span>
+        </div>
+      </div>
+
+      <div class="panels">
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Pesanan terbaru</span>
+            <a class="panel-link">Lihat semua →</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Pelanggan</th><th>Produk</th><th>Total</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Siti Nurhaliza</td><td>Dark 70% Bali</td><td>Rp 145.000</td><td><span class="status-pill success">Selesai</span></td></tr>
+              <tr><td>Budi Santoso</td><td>Milk Choco Sumatra</td><td>Rp 98.000</td><td><span class="status-pill pending">Dikirim</span></td></tr>
+              <tr><td>Maria Goretti</td><td>Praline Box Premium</td><td>Rp 320.000</td><td><span class="status-pill success">Selesai</span></td></tr>
+              <tr><td>Andi Wijaya</td><td>Dark 85% Aceh</td><td>Rp 156.000</td><td><span class="status-pill failed">Dibatalkan</span></td></tr>
+              <tr><td>Lestari Putri</td><td>White Choco Jawa</td><td>Rp 87.000</td><td><span class="status-pill pending">Diproses</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Mitra petani teratas</span>
+            <a class="panel-link">Lihat semua →</a>
+          </div>
+          <div class="farmer-row">
+            <div class="farmer-avatar">PK</div>
+            <div>
+              <div class="farmer-name">Pak Karto</div>
+              <div class="farmer-region">Tabanan, Bali</div>
+            </div>
+            <div class="farmer-amount">820kg</div>
+          </div>
+          <div class="farmer-row">
+            <div class="farmer-avatar">BS</div>
+            <div>
+              <div class="farmer-name">Bu Sari</div>
+              <div class="farmer-region">Pidie, Aceh</div>
+            </div>
+            <div class="farmer-amount">740kg</div>
+          </div>
+          <div class="farmer-row">
+            <div class="farmer-avatar">AR</div>
+            <div>
+              <div class="farmer-name">Pak Arman</div>
+              <div class="farmer-region">Luwu, Sulawesi</div>
+            </div>
+            <div class="farmer-amount">615kg</div>
+          </div>
+          <div class="farmer-row">
+            <div class="farmer-avatar">YN</div>
+            <div>
+              <div class="farmer-name">Bu Yanti</div>
+              <div class="farmer-region">Jember, Jawa</div>
+            </div>
+            <div class="farmer-amount">540kg</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-full">
+        <div class="panel-header">
+          <span class="panel-title">Produk terlaris</span>
+          <a class="panel-link">Kelola produk →</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Produk</th><th>Kategori</th><th>Stok</th><th>Terjual</th><th>Harga</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="product-cell"><div class="product-thumb"><i class="fas fa-cookie" aria-hidden="true"></i></div> Dark Chocolate 70% Bali</div></td>
+              <td>Dark choco</td><td>124</td><td>1.240</td><td>Rp 145.000</td>
+            </tr>
+            <tr>
+              <td><div class="product-cell"><div class="product-thumb"><i class="fas fa-cookie" aria-hidden="true"></i></div> Milk Chocolate Sumatra</div></td>
+              <td>Milk choco</td><td>8</td><td>980</td><td>Rp 98.000</td>
+            </tr>
+            <tr>
+              <td><div class="product-cell"><div class="product-thumb"><i class="fas fa-cookie" aria-hidden="true"></i></div> Praline Box Premium</div></td>
+              <td>Praline</td><td>56</td><td>410</td><td>Rp 320.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="../js/admin.js"></script>
+
+</body>
+</html>
