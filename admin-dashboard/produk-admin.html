@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk - ChocoNesia Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/produk-admin.css">
+  <link rel="icon" href="../logo/cocoa-icon-fix-fix.png">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><i class="fas fa-crown" aria-hidden="true"></i> ChocoNesia</div>
+
+      <div class="nav-section-label">Menu utama</div>
+      <a class="nav-item" href="dashboard.html"><i class="fas fa-grip" aria-hidden="true"></i> Dashboard</a>
+      <a class="nav-item active" href="produk-admin.html"><i class="fas fa-box" aria-hidden="true"></i> Produk</a>
+      <a class="nav-item" href="#"><i class="fas fa-cart-shopping" aria-hidden="true"></i> Pesanan</a>
+      <a class="nav-item" href="#"><i class="fas fa-leaf" aria-hidden="true"></i> Mitra petani</a>
+      <a class="nav-item" href="#"><i class="fas fa-users" aria-hidden="true"></i> Pelanggan</a>
+
+      <div class="nav-section-label">Lainnya</div>
+      <a class="nav-item" href="#"><i class="fas fa-chart-column" aria-hidden="true"></i> Laporan</a>
+      <a class="nav-item" href="#"><i class="fas fa-gear" aria-hidden="true"></i> Pengaturan</a>
+
+      <div class="sidebar-footer">
+        <div class="admin-profile">
+          <div class="admin-avatar">AD</div>
+          <div>
+            <div class="admin-name">Admin ChocoNesia</div>
+            <div class="admin-role">Super admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="page-title">Produk</div>
+          <div class="page-sub">Kelola katalog cokelat ChocoNesia</div>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Ganti tema">
+          <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="product-toolbar">
+        <div class="filter-group">
+          <button class="filter-chip active" data-filter="semua">Semua</button>
+          <button class="filter-chip" data-filter="dark-choco">Dark choco</button>
+          <button class="filter-chip" data-filter="praline">Praline</button>
+        </div>
+        <div class="view-toggle">
+          <button class="active" aria-label="Tampilan grid"><i class="fas fa-grip" aria-hidden="true"></i></button>
+          <button aria-label="Tampilan tabel"><i class="fas fa-list" aria-hidden="true"></i></button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <div class="product-card" data-category="dark-choco">
+          <div class="product-card-image"><i class="fas fa-cookie-bite" aria-hidden="true"></i></div>
+          <div class="product-card-body">
+            <div class="product-card-name">Dark 70% Bali</div>
+            <div class="product-card-stock">Stok: 124</div>
+            <div class="product-card-price">Rp 145rb</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dark-choco">
+          <div class="product-card-image"><i class="fas fa-cookie-bite" aria-hidden="true"></i></div>
+          <div class="product-card-body">
+            <div class="product-card-name">Milk Choco Sumatra</div>
+            <div class="product-card-stock low">Stok: 8</div>
+            <div class="product-card-price">Rp 98rb</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="praline">
+          <div class="product-card-image"><i class="fas fa-gift" aria-hidden="true"></i></div>
+          <div class="product-card-body">
+            <div class="product-card-name">Praline Box Premium</div>
+            <div class="product-card-stock">Stok: 56</div>
+            <div class="product-card-price">Rp 320rb</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="empty-state" id="emptyState">Tidak ada produk pada kategori ini.</p>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/produk-admin.js"></script>
+
+</body>
+</html>

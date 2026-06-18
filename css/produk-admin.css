@@ -1,0 +1,115 @@
+/* ===== PRODUK ADMIN ===== */
+/* File ini di-load SETELAH dashboard.css, sehingga otomatis memakai variabel warna
+   dan style sidebar/topbar yang sama dengan halaman dashboard. */
+
+/* Toolbar: filter kategori + tombol toggle tampilan */
+.product-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-chip {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+}
+.filter-chip:hover { color: var(--heading-color); }
+.filter-chip.active {
+  background: var(--heading-color);
+  color: var(--bg-primary);
+  border-color: var(--heading-color);
+  font-weight: 600;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 3px;
+  background: var(--bg-card);
+}
+.view-toggle button {
+  border: none;
+  background: none;
+  border-radius: 7px;
+  padding: 7px 11px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.view-toggle button.active {
+  background: var(--heading-color);
+  color: var(--bg-primary);
+}
+
+/* Grid kartu produk */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.product-card-image {
+  height: 110px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card-image i {
+  font-size: 28px;
+  color: var(--text-secondary);
+}
+
+.product-card-body { padding: 1rem; }
+.product-card-name {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+.product-card-stock {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.product-card-stock.low {
+  color: var(--accent);
+  font-weight: 600;
+}
+.product-card-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+/* Pesan ketika filter tidak menemukan produk */
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 2.5rem;
+  display: none;
+}
